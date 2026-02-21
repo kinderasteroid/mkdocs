@@ -1,0 +1,92 @@
+site_name: Qwodel Documentation
+site_description: Production-grade model quantization for Python.
+site_url: https://qwodel.readthedocs.io/
+repo_url: https://github.com/yourusername/qwodel
+repo_name: Qwodel
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to auto mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+  - Concepts:
+      - concepts/index.md
+      - Quantization Types: concepts/quantization-types.md
+      - Perplexity vs Speed: concepts/perplexity-vs-speed.md
+  - Guides:
+      - guides/index.md
+      - Choosing a Backend: guides/choosing-a-backend.md
+      - Batch Processing: guides/batch-processing.md
+      - Progress Callbacks: guides/progress-callbacks.md
+  - Backends:
+      - backends/index.md
+      - GGUF: backends/gguf.md
+      - AWQ: backends/awq.md
+      - CoreML: backends/coreml.md
+  - Integrations:
+      - integrations/index.md
+      - HuggingFace: integrations/huggingface.md
+      - Local LLM: integrations/local-llm.md
+      - PyTorch Post-Training: integrations/pytorch.md
+      - Ollama: integrations/ollama.md
+      - llama-cpp-python: integrations/llama-cpp-python.md
+      - vLLM: integrations/vllm.md
+      - iOS App (CoreML): integrations/ios-app.md
+  - API Reference:
+      - api-reference/index.md
+      - Quantizer: api-reference/quantizer.md
+      - Exceptions: api-reference/exceptions.md
+  - CLI Reference:
+      - cli-reference/index.md
+      - check: cli-reference/check.md
+      - quantize: cli-reference/quantize.md
+      - list-formats: cli-reference/list-formats.md
+      - list-backends: cli-reference/list-backends.md
+  - Help:
+      - help/index.md
+      - Troubleshooting: help/troubleshooting.md
